@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    /* Variables de colores */
+    --color-white: #FFFFFF;
+    --color-gray: #707070;
+    --color-black: #080809;
+    --color-gold: #BF9B5F;
+    --color-blue: #222944;
+
+    /* Variables de tamaños de fuente */
+    --sm: 1.6rem;
+    --md: 2rem;
+    --lg: 2.8rem;
+    --xl: 3.6rem;
+}
+
+/* Reset estilo en los botones */
+button {
+    border: none;
+}
+
+/* ***************************************
+----------------- HEADER -----------------
+**************************************** */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__data {
+    align-items: center;
+    display: flex;
+    font-size: var(--sm);
+    justify-content: center;
+    padding: 8px;
+}
+
+.header__data div {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: var(--sm);
+    margin: 0 8px;
+}
+
+.header img {
+    height: var(--md);
+    margin: 0 8px;
+}
+
+.header__cta {
+    background-color: var(--gold);
+    color: var(--white);
+    font-size: var(--md);
+    padding: 0 16px;
+}
+
+/* Navbar */
+
+nav.navbar.bg-dark {
+    background-color: rgba(0, 0, 0, 0)!important;
+    position: absolute;
+    width: 100%;
+}
+
+.collapse.navbar-collapse {
+    justify-content: right;
+}
+
+.navbar-dark .navbar-nav a.nav-link {
+    color: var(--color-white);
+    font-size: var(--sm);
+    padding: 8px;
+}
+
+.navbar-brand img {
+    height: 40px;
+    margin: 0 8px;
+}
+
+
+/* ***************************************
+------------- index.html -----------------
+**************************************** */
+
+.inicio--hero {
+    align-items: center;
+    background-image: url('./images/heroBg.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+}
+
+.hero--text {
+    color: var(--color-white);
+    font-size: var(--xl);
+    font-weight: bold;
+    text-align: center;
+    width: 500px;
+}
+
+
+
+/* ***************************************
+----------------- Media Querys -----------
+**************************************** */
+
+@media (min-width: 320px) {
+    .padding-lr {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    
+    
+}
+
+@media (min-width: 768px) {
+    .padding-lr {
+        padding-left: 72px;
+        padding-right: 72px;
+    }
+}
