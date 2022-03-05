@@ -8,6 +8,13 @@ html {
     font-size: 62.5%;
 }
 
+main {
+    background-image: url('./images/backGround.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: top;
+}
+
 :root {
     /* Variables de colores */
     --color-white: #FFFFFF;
@@ -15,7 +22,6 @@ html {
     --color-black: #080809;
     --color-gold: #BF9B5F;
     --color-blue: #222944;
-
     /* Variables de tamaños de fuente */
     --sm: 1.6rem;
     --md: 2rem;
@@ -23,9 +29,31 @@ html {
     --xl: 3.6rem;
 }
 
-/* Reset estilo en los botones */
+/* Botones */
 button {
     border: none;
+}
+
+.button--primary {
+    background-color: var(--color-gold);
+    border-radius: 28px;
+    color: var(--color-white);
+    cursor: pointer;
+    font-size: var(--lg);
+    transition: all 0.6s ease-out;
+    padding: 12px 20px;
+}
+
+
+.button--primary:hover {
+    background-color: var(--color-blue);
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ***************************************
@@ -37,20 +65,13 @@ button {
     justify-content: space-between;
 }
 
-.header__data {
-    align-items: center;
-    display: flex;
-    font-size: var(--sm);
-    justify-content: center;
-    padding: 8px;
-}
-
 .header__data div {
     align-items: center;
     display: flex;
     justify-content: center;
     font-size: var(--sm);
     margin: 0 8px;
+    padding: 8px;
 }
 
 .header img {
@@ -58,17 +79,17 @@ button {
     margin: 0 8px;
 }
 
-.header__cta {
-    background-color: var(--gold);
-    color: var(--white);
+button.header__cta {
+    background-color: var(--color-gold);
+    color: var(--color-white);
     font-size: var(--md);
     padding: 0 16px;
+    transition: all 0.6s cubic-bezier(0, 1.29, 1, 1);
 }
 
 /* Navbar */
-
 nav.navbar.bg-dark {
-    background-color: rgba(0, 0, 0, 0)!important;
+    background-color: rgba(0, 0, 0, 0) !important;
     position: absolute;
     width: 100%;
 }
@@ -93,7 +114,6 @@ nav.navbar.bg-dark {
 ------------- index.html -----------------
 **************************************** */
 
-
 .inicio__hero {
     align-items: center;
     background-size: cover;
@@ -101,10 +121,7 @@ nav.navbar.bg-dark {
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-}
-.inicio__hero--index{
-    background-image: url('./images/heroBg.png');
-    height: 70vh;
+    height: 90vh;
 }
 .inicio__hero--servicios{
     background-image: url('./images/heroBg2.png');
@@ -115,16 +132,227 @@ nav.navbar.bg-dark {
     height: 35vh;
 }
 
-
-.hero__index--text {
+.hero__text {
     color: var(--color-white);
     font-size: var(--xl);
     font-weight: bold;
     text-align: center;
-    width: 500px;
+}
+
+/* Sección "¿Quienes somos?" */
+.inicio__somos {
+    position: relative;
+    max-height: 1800px;
+    min-height: 715px;
+}
+
+.inicio__somos > div {
+    background-image: url('./images/somosBG.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 32px;
+    color: var(--color-gray);
+    font-size: var(--md);
+    top: -100px;
+    left: calc(50% - 45vw);
+}
+
+.inicio__main h3 {
+    font-size: var(--lg);
+    font-weight: bold;
+    color: var(--color-blue);
+}
+
+.somos__text > * {
+    margin: 16px 0;
+}
+
+.somos__text p.golden {
+    color: var(--color-gold);
+    font-weight: bold;
+    text-align: center;
+}
+
+.somos__icons div {
+    color: var(--color-blue);
+    text-align: center;
+    margin: 12px;
+}
+
+.somos__icons img {
+    height: 120px;
+}
+
+.somos__icons h2 {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.somos__icons h6 {
+    color: var(--color-gray);
+    font-size: var(--md);
+}
+
+/* Sección "Blog" */
+.inicio__blog {
+    position: relative;
+}
+
+.blog__title {
+    color: var(--color-blue);
+    margin-left: 20vh;
+    width: 20vw;
+}
+
+.blog__title h2 {
+    font-size: var(--xl);
+    font-weight: bold;
 }
 
 
+.blog__content::after {
+    background-color: var(--color-blue);
+    content: "";
+    height: 100%;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+.blog__item {
+    position: relative;
+    width: 280px;
+    margin: 24px;
+    z-index: 2;
+}
+
+.blog__item div {
+    position: absolute;
+    bottom: 0;
+    padding: 12px;
+}
+
+.blog__item div > *  {
+    color: var(--color-white);
+    font-size: var(--sm);
+    margin: 12px;
+}
+
+.blog__item div h3 {
+    font-size: var(--lg);
+    font-weight: bold;
+}
+
+.blog__item div a:hover {
+    color: var(--color-gold);
+} 
+
+.blog__item img {
+    width: 100%;
+}
+
+/* Sección contacto */
+.inicio__contacto {
+    text-align: center;
+}
+
+.inicio__contacto h2 {
+    color: var(--color-blue);
+    font-size: var(--xl);
+    font-weight: bold;
+    margin: 24px 0;
+}
+
+.inicio__contacto > div {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    border-radius: 12px;
+    color: var(--color-gray);
+    font-size: var(--sm);
+    margin: 0 auto;
+    padding: 24px 12px;
+}
+
+.inicio__contacto form input,
+.inicio__contacto form textarea {
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    padding: 8px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.inicio__contacto form > button {
+    width: 100%;
+}
+
+/* ***************************************
+----------------- Footer -----------------
+**************************************** */
+.footer {
+    border: 1px solid var(--color-gray);
+    margin-top: 24px;
+}
+
+.footer__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.footer__content > div {
+ border-right: 2px solid var(--color-gray);
+}
+
+.footer__content > div:nth-child(4) {
+    border-right: none;
+}
+
+.footer__content h3 {
+    color: var(--color-blue);
+    font-size: var(--md);
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.footer__content li,
+.footer__content li a {
+    color: var(--color-gray);
+    font-size: var(--md);
+    list-style: none;
+}
+
+.footer__logo {
+    height: 48px;
+    margin: 12px auto;
+}
+
+.footer__info > div {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.footer__info > div > img {
+    width: 32px;
+    margin-right: 16px;
+}
+
+
+.footer__social {
+    text-align: center;
+}
+
+.footer__social > div {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 50%;
+    display: inline-block;
+    height: 40px;
+    padding: 12px;
+    margin: 0 12px;
+    width: 40px;
+}
 
 /* ***************************************
 ----------------- Media Querys -----------
@@ -135,13 +363,97 @@ nav.navbar.bg-dark {
         padding-left: 32px;
         padding-right: 32px;
     }
-    
-    
+
+    .padding-lrtb {
+        padding: 32px;
+    }
+
+    /* Clase para hacer responsive el contenido*/
+    .responsive-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+    header.header,
+    .header__data {
+        flex-direction: column;
+    }
+
+    .navbar-collapse.collapse.show {
+        background-color: rgba(191, 155, 95, 0.7);
+        border-radius: 16px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav.navbar.bg-dark {
+        padding: 12px;
+    }
+
+    button.header__cta {
+        width: 200px;
+        margin: 12px auto;
+    }
+
+    .hero__text {
+        width: 100%;
+    }
+
+    .inicio__somos > div {
+        text-align: center;
+        position: static;
+        width: 100%;
+    }
+
+    .inicio__contacto > div {
+        width: 320px;
+    }
 }
 
 @media (min-width: 768px) {
     .padding-lr {
         padding-left: 72px;
         padding-right: 72px;
+    }
+
+    .padding-lrtb {
+        padding: 72px;
+    }
+
+    .navbar-collapse.collapse.show {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    nav.navbar.bg-dark {
+        padding: 12px 72px;
+    }
+
+    /* Clase para hacer responsive el contenido*/
+    .responsive-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header.header,
+    .header__data {
+        flex-direction: row;
+    }
+
+    button.header__cta {
+        margin: 0;
+        width: auto;
+    }
+
+    .hero__text {
+        width: 500px;
+    }
+
+    .inicio__somos > div {
+        text-align: left;
+        position: relative;
+        width: 84vw;
+    }
+
+    .inicio__contacto > div {
+        width: 520px;
     }
 }
