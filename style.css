@@ -93,18 +93,30 @@ nav.navbar.bg-dark {
 ------------- index.html -----------------
 **************************************** */
 
-.inicio--hero {
+
+.inicio__hero {
     align-items: center;
-    background-image: url('./images/heroBg.png');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
+}
+.inicio__hero--index{
+    background-image: url('./images/heroBg.png');
     height: 70vh;
 }
+.inicio__hero--servicios{
+    background-image: url('./images/heroBg2.png');
+    height: 70vh;
+}
+.inicio__hero--contacto{
+    background-image: url('./images/heroBg.png');
+    height: 35vh;
+}
 
-.hero--text {
+
+.hero__index--text {
     color: var(--color-white);
     font-size: var(--xl);
     font-weight: bold;
