@@ -121,11 +121,15 @@ nav.navbar.bg-dark {
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
+}
+.inicio__hero--index{
+    background-image: url('./images/heroBg.png');
     height: 90vh;
 }
+
 .inicio__hero--servicios{
     background-image: url('./images/heroBg2.png');
-    height: 70vh;
+    height: 90vh;
 }
 .inicio__hero--contacto{
     background-image: url('./images/heroBg.png');
@@ -165,6 +169,11 @@ nav.navbar.bg-dark {
 
 .somos__text > * {
     margin: 16px 0;
+}
+
+.somos__text--hero{
+    padding: 0% 15% 0% 8%;
+    font-size: var(--sm);
 }
 
 .somos__text p.golden {
@@ -286,6 +295,48 @@ nav.navbar.bg-dark {
 
 .inicio__contacto form > button {
     width: 100%;
+}
+
+/* ***************************************
+----------------- Servicios -----------------
+**************************************** */
+.somos__text--hero{
+    color: var(--color-gray);
+}
+/* Sección "¿Que hacemos?" */
+.serv__actividades {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: start;
+}
+.actvidades__img {
+    width: 100%;
+    align-content: center;
+}
+.actividades__icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, min-content);
+    margin: 10% 0;
+}
+.actividades__tittle {
+    grid-column: 1/3;
+}
+
+
+.icon-text {
+    display: flex;
+    font-size: var(--sm);
+    margin: 8% 0%;
+    place-items: center;
+
+}
+.icon-text img{
+    width: 35px;
+    margin-right: 5%;
+}
+.icon-text p{
+    margin: 0;
 }
 
 /* ***************************************
