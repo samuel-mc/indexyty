@@ -121,19 +121,17 @@ nav.navbar.bg-dark {
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
+    height: 90vh;
 }
 .inicio__hero--index{
     background-image: url('./images/heroBg.png');
-    height: 90vh;
 }
 
 .inicio__hero--servicios{
     background-image: url('./images/heroBg2.png');
-    height: 90vh;
 }
 .inicio__hero--contacto{
-    background-image: url('./images/heroBg.png');
-    height: 35vh;
+    background-image: url('./images/heroBg3.png');
 }
 
 .hero__text {
@@ -291,6 +289,8 @@ nav.navbar.bg-dark {
     padding: 8px;
     margin: 8px 0;
     width: 100%;
+    resize: none;
+
 }
 
 .inicio__contacto form > button {
@@ -390,9 +390,65 @@ nav.navbar.bg-dark {
 
 }
 
+/* ***************************************
+----------------- Contacto  -----------
+**************************************** */
+.contacto {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: stretch;
+    text-align: center;
+}
+
+.contacto h3{
+    margin: 4% 0;
+    grid-column: 1/3;
+    font-size: var(--xl);
+    font-weight: bold;
+}
+.contacto__mapa{
+    width: 90%;
+    height: 100%;
+}
+
+.inicio__contacto--left{
+    width: 80% !important;
+    padding: 3% 6% !important;
+}
 
 
+.banner_mercado {
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    justify-items: center;
+    padding-bottom: 4%;
+}
 
+.banner_mercado h3{
+    margin: 4% 0;
+    grid-column: 1/4;
+    font-size: var(--xl);
+    font-weight: bold;
+    text-align: center;
+}
+.mercado__texto{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    font-size: var(--lg);
+    color: var(--color-gray);
+    margin-left: 10%;
+    align-items: center;
+}
+.mercado__texto p{
+    margin: 0;
+}
+.mercado__texto img{
+    width: 30px;
+    margin: 0 10px;
+}
+.somos__icons--size {
+    height: 200px !important;
+}
 
 
 
