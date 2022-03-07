@@ -229,9 +229,14 @@ nav.navbar.bg-dark {
 }
 
 .blog__title {
+    background-color: var(--color-white);
+    border-radius: 12px;
     color: var(--color-blue);
-    margin-left: 20vh;
-    width: 20vw;
+    margin-left: 8vh;
+    padding: 12px;
+    position: relative;
+    z-index: 5;
+    width: 240px;
 }
 
 .blog__title h2 {
