@@ -172,7 +172,7 @@ nav.navbar.bg-dark {
 
 /* Sección "¿Quienes somos?" */
 .inicio__somos > div {
-    background-image: url('./images/somosBg.jpg');
+    background-image: url('./images/somosBG.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 32px;
