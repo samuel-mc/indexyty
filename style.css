@@ -166,10 +166,10 @@ nav.navbar.bg-dark {
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    height: 100vh;
     margin-top: 48px;
     padding: 64px 0;
 }
+
 .inicio__hero.inicio__hero--servicios {
     height: auto;
 }
@@ -190,6 +190,29 @@ nav.navbar.bg-dark {
     font-size: var(--xl);
     font-weight: bold;
     text-align: center;
+}
+
+.hero__text .carousel {
+    font-size: var(--sm);
+    color: var(--color-black);
+    font-weight: normal;
+    text-align: left;
+}
+
+.carousel .carousel-item > * {
+    margin: 12px 0;
+}
+
+.carousel .carousel-item {
+    padding: 32px 60px;
+    background-color: rgba(255, 255, 255, 0.72);
+    border-radius: 12px;
+    transition: all 0.6s ease-out;
+}
+
+.carousel .carousel-item img {
+    height: auto;
+    width: 80px;
 }
 
 /* Sección "¿Quienes somos?" */
@@ -582,7 +605,7 @@ nav.navbar.bg-dark {
     }
 
     .navbar-collapse.collapse.show {
-        background-color: rgba(191, 155, 95, 0.7);
+        background-color: #222944;
         border-radius: 16px;
         transition: all 0.3s ease-in-out;
     }
@@ -596,11 +619,12 @@ nav.navbar.bg-dark {
         margin: 12px auto;
     }
 
-    .hero__text {
-        width: 100%;
-    }
     .inicio__hero {
         margin-top: 148px;
+    }
+
+    .inicio__hero.inicio__hero--index {
+        height: auto;
     }
 
     .serv_fichas{
@@ -670,11 +694,12 @@ nav.navbar.bg-dark {
         width: auto;
     }
 
-    .hero__text {
-        width: 500px;
-    }
     .inicio__hero {
         margin-top: 48px;
+    }
+
+    .inicio__hero.inicio__hero--index {
+        height: 100vh;
     }
 
     .actividades__icons {
