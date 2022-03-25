@@ -183,6 +183,7 @@ nav.navbar.bg-dark {
 }
 .inicio__hero--contacto{
     background-image: url('./images/heroBg3.jpg');
+    height: 80vh;
 }
 
 .hero__text {
