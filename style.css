@@ -538,6 +538,7 @@ nav.navbar.bg-dark {
     color: var(--color-gray);
     font-size: var(--md);
     list-style: none;
+    margin: 12px 0;
 }
 
 .footer__logo {
@@ -578,6 +579,14 @@ nav.navbar.bg-dark {
     transition: all 0.3s ease-in-out;
 }
 
+.footer__privacidad {
+    text-align: center;
+    font-size: var(--md);
+}
+
+.footer__privacidad a {
+    color: var(--color-gray);
+}
 /* ***************************************
 ----------------- Media Querys -----------
 **************************************** */
